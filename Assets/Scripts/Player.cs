@@ -28,6 +28,11 @@ public class Player : MonoBehaviour
         }    
     }
 
+    public void JumpFromTrampoline(float multiplier)
+    {
+        rb.AddForce(_jumpForce * multiplier, ForceMode2D.Impulse);
+    }
+
     private void FixedUpdate()
     {
         float _direction = Input.GetAxisRaw("Horizontal");
